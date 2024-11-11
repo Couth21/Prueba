@@ -1,0 +1,195 @@
+/*STYLES para BTN Color Azul*/
+.btnPrueba, .btnPruebaWhite{
+    background-color: #195BDC;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    transition: background-color 0.4s;
+}
+
+.btnPrueba:hover{
+    background-color: #4983F5;
+}
+
+.btnPrueba:not(:disabled):active{
+    background-color: #1C64F2;
+    box-shadow: 0px 0px 0px 4px #6797F6;
+    /*border-color: #6797F6;
+    border: 4px solid #6797F6; */
+}
+
+.btnPrueba:disabled{
+    background-color: #6797F6;
+}
+
+/*STYLES para BTN White*/
+.btnPruebaWhite{
+    background-color: white;
+    color: #1C64F2;
+    border: 1px solid;
+}
+
+.btnPruebaWhite:hover{
+    color: #4983F5;
+}
+
+.btnPruebaWhite:not(:disabled):active{
+    box-shadow: 0px 0px 0px 4px #97B8F9;
+}
+
+.btnPruebaWhite:disabled{
+    color: #6797F6;
+}
+
+
+/*STYLOS FORM*/
+.float-label {
+    display: grid;
+position: relative;
+}
+
+.float-label label {
+    padding: 0 0.25rem;
+    position: absolute;
+    left: 0.75rem;
+    color: #d1d5db; /* text-neutral-300 */
+    font-family: 'Poppins', sans-serif; /* font-poppins */
+    font-size: 16px; /* text-base */
+    transition: all .3s;
+}
+
+.float-label input ~ label,
+.float-label select ~ label {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.float-label textarea ~ label {
+    top: 20px;
+    transform: translateY(-50%);
+}
+
+.float-label input,
+.float-label textarea,
+.float-label select {
+    outline: none;
+    background-color: #ffffff; /* bg-white */
+    border: 1px solid #f3f4f6; /* border-neutral-100 */
+    border-radius: 12px; /* rounded-[12px] */
+    padding: 12px 16px; /* px-4 py-3 */
+    font-size: 16px; /* text-base */
+    font-family: 'Poppins', sans-serif; /* font-poppins */
+    transition: all .3s;
+}
+
+.float-label input::placeholder,
+.float-label textarea::placeholder,
+.float-label select::placeholder {
+    color: transparent;
+}
+
+.float-label input:not(:disabled):not(:focus):hover,
+.float-label textarea:not(:disabled):not(:focus):hover,
+.float-label select:not(:disabled):not(:focus):hover {
+    background-color: #eff6ff; /* bg-primary-50 */
+    border-color: #dbeafe; /* border-primary-100 */
+}
+
+.float-label input:active,
+.float-label textarea:active,
+.float-label select:active {
+    background-color: #ffffff; /* bg-white */
+    border: 3px solid #c7d2fe; /* border-primary-200 */
+}
+
+.float-label input:active ~ label,
+.float-label textarea:active ~ label,
+.float-label select:active ~ label {
+    color: #cbd5e1; /* text-primary-300 */
+}
+
+.float-label input:disabled,
+.float-label textarea:disabled,
+.float-label select:disabled {
+    cursor: not-allowed;
+    border-color: #f9fafb; /* border-neutral-50 */
+    background-color: #f9fafb; /* bg-neutral-50 */
+}
+
+.float-label input:disabled ~ label,
+.float-label textarea:disabled ~ label,
+.float-label select:disabled ~ label {
+    width: calc(100% - 32px - 8px);
+    cursor: not-allowed;
+    background-color: #f9fafb; /* bg-neutral-50 */
+}
+
+.float-label input:focus,
+.float-label textarea:focus,
+.float-label select:focus {
+    box-shadow: 0 4px 6px rgba(28, 99, 242, 0.11764706);
+    border-color: #3b82f6; /* border-primary-500 */
+    background-color: #ffffff; /* bg-white */
+}
+
+.float-label input:focus ~ label,
+.float-label textarea:focus ~ label,
+.float-label select:focus ~ label,
+.float-label input:not(:placeholder-shown) ~ label,
+.float-label textarea:not(:placeholder-shown) ~ label,
+.float-label select:valid ~ label {
+    color: #146FB4;
+    background-color: #fff;
+    top: 0px;
+}
+
+.float-label input.ng-invalid.ng-touched {
+    border-color: red;
+    box-shadow: 0px 0px 4px rgba(255, 0, 0, 0.5);
+}
+
+.float-label input.ng-invalid.ng-touched ~ label {
+    color: red;
+}
+
+/**/
+section {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+form {
+    display: grid;
+    gap: 8px;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px #000000a2;
+}
+
+h1 {
+    color: var(--color-950);
+    text-align: center;
+}
+
+/* Stylos para el form*/
+.contenidoBtns{
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.contenidoBtns .btnPrueba{
+    order: 2; /*Cambiar orden para los btns*/
+} 
+
+.contenidoSuperiorLabels{
+    display: grid;
+    column-gap: 8px;
+    grid-template-columns: 1fr 400px;
+}
+
